@@ -8,21 +8,26 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 *::after,
 *::before{
     box-sizing: inherit;
+    
 }
 html{
     font-size: 16px;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: Krub, Verdana, Lucida Sans Unicode, sans-serif;
     /* change this font stack to your own choices */
     line-height: 1.5;
+    
 }
 p{
     
+    
 }
 a{
+    
     
 }
 ul{
@@ -36,6 +41,7 @@ li{
 }
 img{
     width: 25%;
+    min-width: 120px;
 }
 
 /*************************************************
@@ -43,12 +49,17 @@ img{
 *************************************************/
 header{
     padding:1rem 2rem;
-    color: black;
+    border-top:solid 15px #A44B49;
+    background-image: url("../img/oscar-keys-34031-unsplash.jpg");
+    background-size: 100%;
 }
 header > h1{
+    color:hsl(100, 100%, 100%);
     
 }
 header > h2{
+    color:#80878E;
+    
     
 }
 /*************************************************
@@ -56,32 +67,63 @@ header > h2{
 *************************************************/
 nav{
     padding:1rem 2rem;
+    display:flex;
+    flex-wrap:wrap;
+    flex-basis: 100%;
+    transition: 0.4s;
+   
 }
 nav > a,
 nav > a:visited,
 nav > a:link{
+    color: #AFB5B8;
+    text-decoration: none;
+    font-weight:bold;
+    flex:1;
+    
     
 }
 nav > a:active,
 nav > a:focus,
 nav > a:hover{
-    
+    color: #A44B49;
 }
 
 /*************************************************
             MAIN CONTENT
 *************************************************/
 main{
-    padding:1rem 2rem;
+    margin:1rem 2rem;
+    
 }
 section{
+    padding-bottom: 20px;
+    
+    
     
 }
-section p{
-    
+section p{    
 }
-section p img{
-    
+section p img {
+    padding-right: 20px;    
+}
+
+section h1{
+    color: #A44B49;
+}
+
+section h2{
+    color: #A44B49;
+}
+.segment p img{
+    float: left;
+}
+.minor-segment {
+    display: inline-block;
+    width: 49%
+}
+.minor-segment p img {
+    float: left;
 }
 
 /*************************************************
@@ -89,40 +131,94 @@ section p img{
 *************************************************/
 footer{
     padding:1rem 2rem;
+    border-top: 20px solid;
+    border-top-color: #A44B49;
+    background-color: hsl(0, 3%, 89%);
 }
 .foot nav{
-    
 }
 .foot section{
     
 }
 .foot dl{
-    
+    width: 50%;
 }
 .foot dt{
-    
+    font-weight: bold;
+    letter-spacing:1.5px;
+    line-height:2rem;
+        
 }
 .foot dd{
     
 }
 .foot dd a,
 .foot dd a:visited{
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
     
 }
 .foot dd a:active,
 .foot dd a:focus,
 .foot dd a:hover{
+    color: #A44B49;
     
+}
+.comments {
+    font-size: 0px;
+}
+.form-box {
+    font-size: 11px;
+}
+.form-box input{
+    width: 49%;    
+}
+.form-box select{
+    width: 99.5%;
+}
+.form-box textarea{
+    width: 99.5%;
 }
 /*************************************************
             MEDIA QUERIES for layout
 *************************************************/
-@media (max-width: 599px){
-    
+@media (max-width: 600px){ 
+    nav {
+        display: block;
+    }
+    nav > a:link{
+        display: block;
+        width: 100%;
+    }
+    .minor-segment {
+        width: 100%;
+    }
 }
-@media (min-width: 600px) and (max-width:999px){
+@media (min-width: 600px) and (max-width:1000px){
+    .minor-segment p img {
+        float: none;
+        width: 100%;
+    }
     
 }
 @media (min-width: 1000px){
+    section {
+        vertical-align: top;
+    }
+    .segment {
+        display: inline-block;
+        width: 32%;
+    }
+    .segment p img{
+        width: 100%;
+        float: none;
+    }
+    .minor-segment {
+        width: 32%;
+    }
+    .minor-segment p img {
+        float: none;
+        width: 100%;
+    }
     
 }
